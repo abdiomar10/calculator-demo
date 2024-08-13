@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [value,setValue]=useState('')
+  const [value, setValue] = useState('');
+
   return (
     <div className="container">
+      <h1>My Calculator App</h1> {/* Title added here */}
       <div className="calculator">
         <form action="">
           <div className="display">
@@ -27,17 +29,17 @@ function App() {
             <input type="button" value="5" onClick={e => setValue(value + e.target.value)}/>
             <input type="button" value="6" onClick={e => setValue(value + e.target.value)}/>
             <input type="button" value="+" onClick={e => setValue(value + e.target.value)}/>
-            <div>
+          </div>
+          <div>
             <input type="button" value="1" onClick={e => setValue(value + e.target.value)}/>
             <input type="button" value="2" onClick={e => setValue(value + e.target.value)}/>
             <input type="button" value="3" onClick={e => setValue(value + e.target.value)}/>
             <input type="button" value="-" onClick={e => setValue(value + e.target.value)}/>
-            <div>
+          </div>
+          <div>
             <input type="button" value="0" onClick={e => setValue(value + e.target.value)}/>
             <input type="button" value="00" onClick={e => setValue(value + e.target.value)}/>
             <input type="button" value="=" className="equal" onClick={e => setValue(eval(value))}/>
-          </div>
-          </div>
           </div>
         </form>
       </div>
